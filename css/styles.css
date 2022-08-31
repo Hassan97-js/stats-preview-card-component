@@ -1,0 +1,130 @@
+/*
+
+Design settings:
+
+--- 01 TYPOGRAPHY SYSTEM (px)
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Line heights: 1, 1.5
+Default:
+Small:
+Medium:
+Paragraph default:
+
+- Letter spacing: -0.2px
+Heading letter spacing:
+Subheading letter spacing:
+
+--- 02 COLORS
+(Primary with tints, shades and accent colors)
+
+- Primary:
+- Tints:
+- Shades:
+- Accents:
+- Greys:
+  - dark:
+  - medium:
+  - light:
+- White: hsl(0, 0%, 100%)
+
+--- 03 IMAGES
+- No system
+
+--- 04 ICONS
+- source:
+
+--- 05 SHADOWS
+- No system
+
+--- 06 BORDER RADIUS:
+- 11px
+- 20px
+
+--- 07 WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/*
+
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 10 / 16px */
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 3.2rem;
+  background-color: hsl(233, 47%, 7%);
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-size: 400;
+  line-height: 1;
+}
+
+/* ******************************** */
+/* LAYOUT STYLES */
+/* ******************************** */
+
+.stats-preview-card {
+  width: 100%;
+  background-color: hsl(244, 38%, 16%);
+  color: hsl(0, 0%, 100%);
+}
+
+.preview-card-img {
+  width: 100%;
+  height: 55rem;
+  background-image: url(/images/image-header-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.preview-card-details,
+.preview-card-img {
+  flex: 1;
+}
+
+/* ******************************** */
+/* UTILITIES STYLES */
+/* ******************************** */
+
+.flex {
+  display: flex !important;
+}
+
+.jc-center {
+  justify-content: center !important;
+}
+
+.jc-between {
+  justify-content: space-between !important;
+}
+
+.al-center {
+  align-items: center !important;
+}
