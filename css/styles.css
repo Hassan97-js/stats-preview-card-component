@@ -49,10 +49,11 @@ Subheading letter spacing:
 */
 
 /*
-
 font-family: 'Inter', sans-serif;
 font-family: 'Lexend Deca', sans-serif;
 */
+
+/* TODO: REVIEW THE CODE */
 
 *,
 *::before,
@@ -63,26 +64,22 @@ font-family: 'Lexend Deca', sans-serif;
 }
 
 html {
-  /* 10 / 16px */
   font-size: 62.5%;
   box-sizing: border-box;
-}
-
-html,
-body,
-main {
-  height: 100%;
 }
 
 body {
   max-width: 144rem;
   margin: 0 auto;
-  padding: 3.2rem;
   background-color: hsl(233, 47%, 7%);
   font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
-  font-size: 400;
+  font-weight: 400;
   line-height: 1;
+}
+
+main {
+  min-height: 100vh;
+  margin: 4.8rem;
 }
 
 /* ******************************** */
@@ -93,20 +90,69 @@ body {
   width: 100%;
   background-color: hsl(244, 38%, 16%);
   color: hsl(0, 0%, 100%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
-.preview-card-img {
-  width: 100%;
-  height: 55rem;
-  background-image: url(/images/image-header-desktop.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.preview-card-details {
+  padding: 6.4rem;
 }
 
 .preview-card-details,
 .preview-card-img {
-  flex: 1;
+  flex: 1 0 50%;
+}
+
+.preview-card-img {
+  background: url(/images/image-header-desktop.jpg);
+  background-color: hsl(277, 46%, 39%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  opacity: 0.75;
+}
+
+.stats {
+  width: 85%;
+}
+
+/* ******************************** */
+/* TYPOGRAPHY STYLES */
+/* ******************************** */
+
+.heading-highlight {
+  color: hsl(277, 64%, 61%);
+}
+
+.heading-primary {
+  margin-bottom: 3.2rem;
+  max-width: 18ch;
+  font-size: 4.4rem;
+  line-height: 1.2;
+}
+
+.preview-card-description {
+  margin-bottom: 12.8rem;
+  max-width: 40ch;
+  font-size: 1.8rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.6;
+}
+
+.stats-header {
+  margin-bottom: 1.2rem;
+  font-size: 3rem;
+}
+
+.stats-txt {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: hsla(0, 0%, 100%, 0.6);
+  letter-spacing: 1px;
 }
 
 /* ******************************** */
@@ -127,4 +173,122 @@ body {
 
 .al-center {
   align-items: center !important;
+}
+
+/* ******************************** */
+/* MEDIA QUERIES */
+/* ******************************** */
+
+/* 1200px breakpoint */
+@media all and (max-width: 75em) {
+  html {
+    /* 8 / 16px */
+    font-size: 50%;
+  }
+
+  .stats {
+    width: 95%;
+  }
+
+  .preview-card-description {
+    font-size: 2rem;
+  }
+
+  .stats-header {
+    font-size: 3.6rem;
+  }
+}
+
+/* 950px breakpoint */
+@media all and (max-width: 59.375em) {
+  html {
+    /* 7 / 16px */
+    font-size: 43.75%;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main {
+    min-height: auto;
+  }
+
+  .stats-preview-card {
+    max-width: 70rem;
+    flex-direction: column;
+    border-bottom-right-radius: 10px;
+  }
+
+  .stats {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.8rem;
+  }
+
+  .preview-card-details {
+    text-align: center;
+  }
+
+  .preview-card-img {
+    height: 50rem;
+    flex: 0 1 50rem;
+    order: -1;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0;
+  }
+
+  .preview-card-details {
+    flex: auto;
+  }
+
+  .heading-primary,
+  .preview-card-description {
+    max-width: 100%;
+  }
+
+  .heading-primary {
+    font-size: 4.2rem;
+  }
+
+  .preview-card-description {
+    font-size: 2.4rem;
+  }
+
+  .stats-header {
+    font-size: 4rem;
+  }
+
+  .stats-txt {
+    font-size: 2rem;
+  }
+}
+
+/* 580px breakpoint */
+@media all and (max-width: 36.25em) {
+  .stats-preview-card {
+    width: auto;
+    max-width: 100%;
+  }
+
+  .stats {
+    text-align: center;
+  }
+}
+
+/* 445px breakpoint */
+@media all and (max-width: 36.25em) {
+  html {
+    /* 5 / 16px */
+    font-size: 37.5%;
+  }
+
+  .preview-card-details {
+    padding: 6.4rem 3.2rem;
+  }
 }
